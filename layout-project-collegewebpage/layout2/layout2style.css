@@ -1,0 +1,311 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+  }
+  a {
+    text-decoration: none;
+    color: rgb(41, 40, 40);
+  }
+  
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .logoimage {
+    width: 100px;
+    height: 100px;
+    border-radius: 1rem;
+    margin: 1rem;
+  }
+  
+  .nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+  }
+  .nav ul li {
+    padding: 1.5rem;
+  }
+  
+  .nav ul li a {
+    color: #0b0a0a;
+    font-size: 1.5em;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .container1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    max-width: 1200px;
+    margin-top: 40px;
+  }
+  
+  .contentleft {
+    width: 60%;
+  }
+  
+  .contentleft h2 {
+    margin-top: 40px;
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .content-list {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .content-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .content-list span {
+    font-size: large;
+    color: red;
+  }
+  
+  .content-list li {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .contact-form {
+    width: 30%;
+    height: auto;
+    min-height: 400px;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .contact-form h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .contact-form p {
+      
+    font-size: 14px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #ccc;
+  }
+  
+  .contact-form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  .contact-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .contact-form button:hover {
+    background-color: #c0392b;
+  }
+  
+  
+  
+  .footer{
+      background-color: #333;
+      width: 100vw;
+      height: 80px;
+  }
+  
+  .footer-heading{
+     padding-top: 1rem;
+      font-size: large;
+      color: whitesmoke;
+      padding-left: 5rem;
+  
+  }
+  
+  .footer-endline{
+      font-size: medium;
+      color: whitesmoke;
+      padding-left: 5rem;
+  }
+  
+  /* Screen 1: For large screens (1024px to 1920px) */
+  @media (min-width: 1024px) and (max-width: 1920px) {
+      .container1 {
+        flex-direction: row;
+      }
+      .contentleft {
+        width: 60%; 
+      }
+      .contact-form {
+        width: 30%; 
+      }
+    }
+    
+    /* Screen 2: For medium screens (768px to 1023px) */
+    @media (min-width: 768px) and (max-width: 1023px) {
+      .container1 {
+        
+        align-items: center;
+        padding: 10px;
+      }
+      .contentleft {
+        width: 100%; 
+        margin-bottom: 20px;
+      }
+      .contact-form {
+        width: 100%; 
+      }
+      .header {
+        flex-direction: row; 
+        align-items: center;
+      }
+      .logoimage {
+        width: 80px; 
+        height: 80px;
+      }
+      .nav ul {
+        flex-direction: row;
+      }
+      .nav ul li {
+        padding: 1rem;
+      }
+    }
+    
+    /* Screen 3: For small screens (450px to 767px) */
+    @media (min-width: 450px) and (max-width: 767px) {
+      .container1 {
+        flex-direction: row; 
+        align-items: center;
+        padding: 5px;
+      }
+      .contentleft {
+        width: 100%; 
+        margin-bottom: 20px;
+      }
+      .contact-form {
+        width: 100%;
+        margin-top: 20px;
+      }
+      .header {
+        flex-direction: row; 
+        align-items: center;
+      }
+      .logoimage {
+        width: 250px;
+        height: 250px;
+      }
+      .nav ul {
+        flex-direction: column; 
+      }
+      .nav ul li {
+        padding: 0.8rem; 
+        font-size: 1.2em; 
+      }
+      .contact-form h2 {
+        font-size: 16px; 
+      }
+      .contact-form p {
+        font-size: 12px; 
+      }
+      .footer-heading {
+        font-size: 14px; 
+      }
+      .footer-endline {
+        font-size: 12px; 
+      }
+    }
+  
+  
+  
+    /* Screen 0: For extra-small screens (0px to 449px) */
+  @media (max-width: 449px) {
+      .header {
+        flex-direction: column; 
+        align-items: center;
+      }
+      .logoimage {
+        width: 50px;
+        height: 50px;
+      }
+      .nav ul {
+        flex-direction: column;
+        padding: 0;
+      }
+      .nav ul li {
+        padding: 0.5rem; 
+        font-size: 1em;
+      }
+      .container1 {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px; 
+      }
+      .contentleft {
+        width: 100%; 
+        text-align: center; 
+        margin-bottom: 15px; 
+      }
+      .contact-form {
+        width: 100%; 
+        margin-top: 15px;
+      }
+      .contact-form h2 {
+        font-size: 14px; 
+      }
+      .contact-form p {
+        font-size: 12px; 
+      }
+      .contact-form input {
+        font-size: 12px; 
+        padding: 8px; 
+      }
+      .contact-form button {
+        font-size: 12px; 
+        padding: 8px;
+      }
+      .footer {
+        height: auto; 
+        text-align: center; 
+        padding: 10px; 
+      }
+      .footer-heading {
+        font-size: 12px; 
+      }
+      .footer-endline {
+        font-size: 10px; 
+      }
+    }
+    
+    
+  
+  
+  
