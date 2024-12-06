@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+<body style="background-color: #8f8a8a;">
+    <div class="container">
+        <div class="form">
+            <h2>REGISTRATION FORM</h2>
+        </div>
+
+        <form>
+            <div>
+                <label for="first-name">FIRST NAME</label>
+                <input type="text" id="first-name" maxlength="30">  
+            </div>
+
+            <div>
+                <label for="last-name">LAST NAME</label>
+                <input type="text" id="last-name" maxlength="30">
+            </div>
+
+            <div>
+                <label for="dob">DATE OF BIRTH</label>
+                <div>
+                    <select id="day" name="day">
+                        <option value="">Day</option>
+                        <script>
+                            for (let i = 1; i <= 31; i++) {
+                                document.write(<option value="${i}">${i}</option>);
+                            }
+                        </script>
+                    </select>
+            
+                    
+                    <select id="month" name="month">
+                        <option value="">Month</option>
+                        <option value="1">January</option>
+                        <option value="2">February</option>
+                        <option value="3">March</option>
+                        <option value="4">April</option>
+                        <option value="5">May</option>
+                        <option value="6">June</option>
+                        <option value="7">July</option>
+                        <option value="8">August</option>
+                        <option value="9">September</option>
+                        <option value="10">October</option>
+                        <option value="11">November</option>
+                        <option value="12">December</option>
+                    </select>
+            
+                    
+                    <select id="year" name="year">
+                        <option value="">Year</option>
+                        <script>
+                            const yearSelector = document.getElementById("year");
+                            for (let i = 1900; i <= 2024; i++) {
+                                const option = document.createElement("option");
+                                option.value = i;
+                                option.textContent = i;
+                                yearSelector.appendChild(option);
+                            }
+                        </script>
+                    </select>
+                </div>
+            </div>
+
+            <div>
+                <label for="email">EMAIL ID</label>
+                <input type="email" id="email">
+            </div>
+
+            <div>
+                <label for="mobile">MOBILE NUMBER</label>
+                <input type="tel" id="mobile" maxlength="10">
+            </div>
+
+            <div>
+                <label for="gender">GENDER</label>
+                <div>
+                    <input type="radio" id="male" name="gender" value="Male">
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="Female">
+                    <label for="female">Female</label>
+                </div>
+            </div>
+
+            <div>
+                <label for="address">ADDRESS</label>
+                <textarea id="address"></textarea>
+            </div>
+
+            <div>
+                <label for="city">CITY</label>
+                <input type="text" id="city" maxlength="30">
+            </div>
+
+            <div>
+                <label for="pin-code">PIN CODE</label>
+                <input type="text" id="pin-code" maxlength="6">
+            </div>
+
+            <div>
+                <label for="state">STATE</label>
+                <input type="text" id="state" maxlength="30">
+            </div>
+
+            <div>
+                <label for="country">COUNTRY</label>
+                <input type="text" id="country">
+            </div>
+
+            <div>
+                <label for="hobbies">HOBBIES</label>
+                <div>
+                    <input type="checkbox" id="drawing" name="hobbies" value="Drawing">
+                    <label for="drawing">Drawing</label>
+                    <input type="checkbox" id="singing" name="hobbies" value="Singing">
+                    <label for="singing">Singing</label>
+                    <input type="checkbox" id="dancing" name="hobbies" value="Dancing">
+                    <label for="dancing">Dancing</label>
+                    <input type="checkbox" id="sketching" name="hobbies" value="Sketching">
+                    <label for="sketching">Sketching</label>
+                    <input type="checkbox" id="others" name="hobbies" value="Others">
+                    <label for="others">Others</label>
+                </div>
+            </div>
+
+            <div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Sl.No.</th>
+                            <th>Examination</th>
+                            <th>Board</th>
+                            <th>Percentage</th>
+                            <th>Year of Passing</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Class X</td>
+                            <td><input type="text"></td>
+                            <td><input type="text" maxlength="10"></td>
+                            <td><input type="text" maxlength="4"></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Class XII</td>
+                            <td><input type="text"></td>
+                            <td><input type="text" maxlength="10"></td>
+                            <td><input type="text" maxlength="4"></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Graduation</td>
+                            <td><input type="text"></td>
+                            <td><input type="text" maxlength="10"></td>
+                            <td><input type="text" maxlength="4"></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Masters</td>
+                            <td><input type="text"></td>
+                            <td><input type="text" maxlength="10"></td>
+                            <td><input type="text" maxlength="4"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div>
+                <label for="courses">COURSES APPLIED FOR</label>
+                <input type="checkbox" id="bscs" name="courses" value="BSCS">
+                <label for="bscs">BSCS</label>
+                <input type="checkbox" id="bbabs" name="courses" value="BBABS(ME)">
+                <label for="bbabs">BBABS(ME)</label>
+                <input type="checkbox" id="bsee" name="courses" value="BS(EE)">
+                <label for="bsee">BS(EE)</label>
+            </div>
+
+            <div>
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
